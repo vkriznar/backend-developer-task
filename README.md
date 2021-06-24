@@ -4,6 +4,8 @@ Setup process:
 * Install all python dependencies `pip install -r requirements.txt`
 * Run Python: FastAPI which is specified in `.vscode/launch.json`
 
+Mock database is done with SQLite and is in `app/app.db`. You can open with SQLite like explorer such as DBBrowser(SQLite).
+
 
 
 # Notes API
