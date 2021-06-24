@@ -13,7 +13,7 @@ def create_folder(username: str, folder: FolderCreate, context: AppContextAuth =
     return FolderApi(context).create_folder(username, folder)
 
 
-@router.put("/id", response_model=FolderOut, description="Update folder with new name", status_code=204)
+@router.put("/id", response_model=FolderOut, description="Update folder with new name", status_code=200)
 def update_folder(folder_id: int, folder: FolderUpdate, context: AppContextAuth = Depends(get_auth_context)):
     return FolderApi(context).update_folder(folder_id, folder)
 
