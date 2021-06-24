@@ -1,5 +1,7 @@
 from typing import List
-from app.schemas.folder import FolderCreate
+
+from fastapi.encoders import jsonable_encoder
+from app.schemas.folder import FolderCreate, FolderUpdate
 from sqlalchemy.orm import Session
 from app.crud.models import Folder
 from app.context.context import AppContext
@@ -38,3 +40,15 @@ class FolderDb:
         self.db.commit()
         self.db.refresh(db_folder)
         return db_folder
+
+    def update(self, folder_id: int, folder_update: FolderUpdate) -> Folder:
+        folder = self.get(folder_id)
+        obj_data = jsonable_encoder(folder)
+
+        update_object = folder_update.dict(exclude_unset=True)
+        for field in obj_data:
+            if field in update_object:
+                setattr(folder, field, update_object[field])
+
+        self.db.commit()
+        return folder

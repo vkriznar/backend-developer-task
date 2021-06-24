@@ -5,8 +5,8 @@ class FolderBase(BaseModel):
     name: str
 
 
-class FolderUpdate(BaseModel):
-    new_name: str
+class FolderUpdate(FolderBase):
+    pass
 
 
 class FolderCreate(FolderBase):

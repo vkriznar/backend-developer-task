@@ -1,16 +1,15 @@
 from typing import List
-from app.crud.folder import FolderDb
 from app.api.workers.folder_api import FolderApi
 from app.schemas.folder import FolderCreate, FolderOut, FolderUpdate
 from app.context.auth_context import AppContextAuth, get_auth_context
 from fastapi import APIRouter, Depends
 
-router = APIRouter(prefix="/users/{username}/folders")
+router = APIRouter(prefix="/users/{user_id}/folders")
 
 
 @router.post("", response_model=FolderOut, description="Create new folder for user", status_code=201)
-def create_folder(username: str, folder: FolderCreate, context: AppContextAuth = Depends(get_auth_context)):
-    return FolderApi(context).create_folder(username, folder)
+def create_folder(user_id: str, folder: FolderCreate, context: AppContextAuth = Depends(get_auth_context)):
+    return FolderApi(context).create_folder(user_id, folder)
 
 
 @router.put("/id", response_model=FolderOut, description="Update folder with new name", status_code=200)
@@ -24,8 +23,8 @@ def delete_folder(folder_id: int, force: bool, context: AppContextAuth = Depends
 
 
 @router.get("", response_model=List[FolderOut], description="Get all folders for user")
-def get_all(username: str, context: AppContextAuth = Depends(get_auth_context)):
-    return FolderApi(context).get_all(username)
+def get_all(user_id: str, context: AppContextAuth = Depends(get_auth_context)):
+    return FolderApi(context).get_all(user_id)
 
 
 @router.get("/{id}", response_model=FolderOut)
@@ -34,5 +33,5 @@ def get(id: int, context: AppContextAuth = Depends(get_auth_context)):
 
 
 @router.get("/name/{name}", response_model=FolderOut)
-def get_by_name(username: str, name: str, context: AppContextAuth = Depends(get_auth_context)):
-    return FolderApi(context).get_by_name(username, name)
+def get_by_name(user_id: str, name: str, context: AppContextAuth = Depends(get_auth_context)):
+    return FolderApi(context).get_by_name(user_id, name)
