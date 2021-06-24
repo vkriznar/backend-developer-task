@@ -18,7 +18,10 @@ class NoteDb:
             .filter(Note.name == name)
         return self.db.query(query.exists()).scalar()
 
-    def get_all(self, folder_id: int) -> List[Note]:
+    def get_all(self) -> List[Note]:
+        return self.db.query(Note).all()
+
+    def get_all_for_id(self, folder_id: int) -> List[Note]:
         return self.db.query(Note).filter(Note.folder_id == folder_id).all()
 
     def get(self, note_id: int) -> Note:

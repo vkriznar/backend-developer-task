@@ -23,7 +23,7 @@ def get_all_auth(context: AppContextAuth = Depends(get_auth_context)):
     return FolderApi(context).get_all_default()
 
 
-@router.get("/notes", response_model=List[NoteOut], description="Get all folders for user")
+@router.get("/notes", response_model=List[NoteOut], description="Get all notes for user")
 def get_all_notes(
     notes_per_page: int,
     page_nr: int,
@@ -32,12 +32,12 @@ def get_all_notes(
     node_text_filter: Optional[str] = None,
     shared_sorting: Optional[SharedType] = SharedType.NONE,
     heading_sorting: Optional[HeadingSort] = HeadingSort.NONE,
-    context: AppContextAuth = Depends(get_auth_context)
+    context: AppContext = Depends(get_context)
 ):
     return NoteApi(context).get_all_default(folder_id, notes_per_page, page_nr, shared_filter, node_text_filter, shared_sorting, heading_sorting)
 
 
-@router.get("/auth/notes", response_model=List[NoteOut], description="Get all folders for user")
+@router.get("/auth/notes", response_model=List[NoteOut], description="Get all notes for user. For authenticated users.")
 def get_all_notes_auth(
     notes_per_page: int,
     page_nr: int,

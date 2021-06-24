@@ -71,7 +71,8 @@ class NoteApi:
         shared_sorting: SharedType,
         heading_sorting: HeadingSort
     ) -> List[NoteOut]:
-        notes_db = self.note_db.get_all(folder_id)
+
+        notes_db = self.note_db.get_all() if folder_id is None else self.note_db.get_all_for_id(folder_id)
 
         # Filter those that can be seen by logged in user
         logged_user_id = self.ctx.user.id if hasattr(self.ctx, "user") else -2
