@@ -8,7 +8,7 @@ class NoteBase(BaseModel):
     name: str
     shared: bool
     type: NoteType
-    text_body: str
+    text_body: Optional[str]
 
 
 class NoteUpdate(BaseModel):

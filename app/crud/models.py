@@ -35,7 +35,7 @@ class Note(Base):
     name = Column(String(30), nullable=False)
     shared = Column(Boolean, nullable=False)
     type = Column(Enum(NoteType), nullable=False)
-    text_body = Column(String(), nullable=False)
+    text_body = Column(String(), nullable=True)
 
 
 class ListDbModel(Base):
