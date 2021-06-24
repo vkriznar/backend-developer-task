@@ -12,7 +12,7 @@ class NoteBase(BaseModel):
 
 
 class NoteUpdate(BaseModel):
-    new_name: Optional[str]
+    name: Optional[str]
     shared: Optional[bool]
     text_body: Optional[str]
 

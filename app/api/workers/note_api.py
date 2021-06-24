@@ -5,7 +5,7 @@ from app.crud.types import NoteType
 from app.crud.user import UserDb
 from typing import List
 from app.crud.note import NoteDb
-from app.schemas.note import NoteCreate, NoteOut, NoteUpdate
+from app.schemas.note import NoteBase, NoteCreate, NoteOut, NoteUpdate
 from sqlalchemy.orm import Session
 from app.context.context import AppContext
 from fastapi import HTTPException, status
@@ -33,17 +33,28 @@ class NoteApi:
             raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, f"Note with name '{name}' already exists")
 
     def __raise_nonempty_note__(self, note_id: int):
-        msg = f"""
-            Note with id {note_id} cannot be deleted since it has nested lists.
-            If you wish to recursively delete nested lists, rerequest api with parameter force=true.
-        """
+        msg = f"Note with id {note_id} cannot be deleted since it has nested lists. If you wish to recursively delete nested lists, rerequest api with parameter force=true."
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
+
+    def __raise_nonempty_text_body__(self):
+        msg = f"Cannot create/update note, since it has type {NoteType.LIST} therefore it cannot have non-empty text_body field."
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
+
+    def __raise_empty_text_body__(self):
+        msg = f"Cannot create/update note, since it has type {NoteType.TEXT} therefore it cannot have empty text_body field."
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
 
     def create(self, folder_id: int, note: NoteCreate) -> NoteOut:
         self.__check_notename_not_exist__(folder_id, note.name)
-        return self.note_db.create(folder_id, note)
+        self._check_note_validity(note.type, note.text_body)
+
+        note_db = self.note_db.create(folder_id, note)
+        return self._map_note(note_db)
 
     def update(self, note_id: int, note_update: NoteUpdate) -> NoteOut:
+        if note_update.text_body is not None:
+            note = self.note_db.get(note_id)
+            self._check_note_validity(note.type, note_update.text_body)
         return self.note_db.update(note_id, note_update)
 
     def delete(self, note_id: int, force: bool):
@@ -72,3 +83,9 @@ class NoteApi:
 
     def _map_note(self, note_db: Note) -> NoteOut:
         return NoteOut(**vars(note_db), lists=self.list_api.get_all(note_db.id))
+
+    def _check_note_validity(self, type: NoteType, text_body: str):
+        if type == NoteType.LIST and text_body is not None:
+            self.__raise_nonempty_text_body__()
+        elif type == NoteType.TEXT and text_body is None:
+            self.__raise_empty_text_body__()

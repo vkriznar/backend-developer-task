@@ -40,7 +40,8 @@ class FolderApi:
 
     def create(self, user_id: str, folder: FolderCreate) -> FolderOut:
         self.__check_foldername_not_exist__(user_id, folder.name)
-        return self.folder_db.create(user_id, folder)
+        folder_db = self.folder_db.create(user_id, folder)
+        return self._map_folder(folder_db)
 
     def update(self, folder_id: int, folder_update: FolderUpdate) -> FolderOut:
         return self.folder_db.update(folder_id, folder_update)
