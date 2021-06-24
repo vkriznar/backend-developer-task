@@ -23,6 +23,7 @@ class UserDb:
     def create(self, new_user: UserCreate) -> User:
         salt_hash = get_password_hash(new_user.password)
         db_user = User(
+            name=new_user.name,
             username=new_user.username,
             hashed_password=salt_hash.hash,
             salt=salt_hash.salt
