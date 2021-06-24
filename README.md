@@ -1,9 +1,17 @@
+Setup process:
+* Create python virtual env `python -m venv .venv`
+* Enter virtual env: On windows`.venv\scripts\activate` or Linux `source .venv/bin/activate`
+* Install all python dependencies `pip install -r requirements.txt`
+* Run Python: FastAPI which is specified in `.vscode/launch.json`
+
+
+
 # Notes API
 
-Create REST API that allows users to manage their notes.  
-Notes can be organized into folders for easier management.  
-API should allow user authentication through basic HTTP authentication (username and password).  
-The goal is to build a simple but secure and easily scalable service.  
+Create REST API that allows users to manage their notes.
+Notes can be organized into folders for easier management.
+API should allow user authentication through basic HTTP authentication (username and password).
+The goal is to build a simple but secure and easily scalable service.
 
 ### Entities
 * Basic user info (name, username, password) should be stored in the database
@@ -39,5 +47,3 @@ The goal is to build a simple but secure and easily scalable service.
   * Add [instructions](instructions/README.md)
   * Add [database seed](database/README.md)
   * Add [credentials](credentials/README.md)
-
-
