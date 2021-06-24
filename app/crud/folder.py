@@ -19,7 +19,10 @@ class FolderDb:
             .filter(Folder.name == name)
         return self.db.query(query.exists()).scalar()
 
-    def get_all(self, user_id: int) -> List[Folder]:
+    def get_all(self) -> List[Folder]:
+        return self.db.query(Folder).all()
+
+    def get_all_for_id(self, user_id: int) -> List[Folder]:
         return self.db.query(Folder).filter(Folder.user_id == user_id).all()
 
     def get(self, folder_id: int) -> Folder:

@@ -1,3 +1,4 @@
+from app.context.auth_context import AppContextAuth
 from app.crud.models import Note
 from app.api.workers.list_api import ListApi
 from app.crud.list import ListDb
@@ -5,59 +6,43 @@ from app.crud.types import NoteType
 from app.crud.user import UserDb
 from typing import List
 from app.crud.note import NoteDb
-from app.schemas.note import NoteBase, NoteCreate, NoteOut, NoteUpdate
+from app.schemas.note import NoteCreate, NoteOut, NoteUpdate
 from sqlalchemy.orm import Session
-from app.context.context import AppContext
 from fastapi import HTTPException, status
 
 
 class NoteApi:
+    ctx: AppContextAuth
     db: Session
     user_db: UserDb
     note_db: NoteDb
     list_db: ListDb
 
-    def __init__(self, context: AppContext):
+    def __init__(self, context: AppContextAuth):
+        self.ctx = context
         self.db = context.db
         self.user_db = UserDb(context)
         self.note_db = NoteDb(context)
         self.list_db = ListDb(context)
         self.list_api = ListApi(context)
 
-    def __check_notename_exist__(self, folder_id: int, name: str):
-        if not self.note_db.note_exists(folder_id, name):
-            raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, f"Note with name '{name}' doesn't exist")
-
-    def __check_notename_not_exist__(self, folder_id: int, name: str):
-        if self.note_db.note_exists(folder_id, name):
-            raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, f"Note with name '{name}' already exists")
-
-    def __raise_nonempty_note__(self, note_id: int):
-        msg = f"Note with id {note_id} cannot be deleted since it has nested lists. If you wish to recursively delete nested lists, rerequest api with parameter force=true."
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
-
-    def __raise_nonempty_text_body__(self):
-        msg = f"Cannot create/update note, since it has type {NoteType.LIST} therefore it cannot have non-empty text_body field."
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
-
-    def __raise_empty_text_body__(self):
-        msg = f"Cannot create/update note, since it has type {NoteType.TEXT} therefore it cannot have empty text_body field."
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
-
-    def create(self, folder_id: int, note: NoteCreate) -> NoteOut:
+    def create(self, user_id: int, folder_id: int, note: NoteCreate) -> NoteOut:
+        self.__validate_user__(user_id)
         self.__check_notename_not_exist__(folder_id, note.name)
         self._check_note_validity(note.type, note.text_body)
 
         note_db = self.note_db.create(folder_id, note)
         return self._map_note(note_db)
 
-    def update(self, note_id: int, note_update: NoteUpdate) -> NoteOut:
+    def update(self, user_id: int, note_id: int, note_update: NoteUpdate) -> NoteOut:
+        self.__validate_user__(user_id)
         if note_update.text_body is not None:
             note = self.note_db.get(note_id)
             self._check_note_validity(note.type, note_update.text_body)
         return self.note_db.update(note_id, note_update)
 
-    def delete(self, note_id: int, force: bool):
+    def delete(self, user_id: int, note_id: int, force: bool):
+        self.__validate_user__(user_id)
         note = self.get(note_id)
         if note.type == NoteType.LIST:
             note_lists = self.list_db.get_all(note.id)
@@ -68,15 +53,19 @@ class NoteApi:
 
         self.note_db.delete(note_id)
 
-    def get_all(self, folder_id: int) -> List[NoteOut]:
+    def get_all(self, user_id: int, folder_id: int) -> List[NoteOut]:
         notes_db = self.note_db.get_all(folder_id)
-        return list(map(lambda n: self._map_note(n), notes_db))
+        logged_user_id = self.ctx.user.id if hasattr(self.ctx, "user") else -2
+        filtered_notes = filter(lambda n: n.shared or logged_user_id == user_id, notes_db)
+        return list(map(lambda n: self._map_note(n), filtered_notes))
 
-    def get(self, note_id: int) -> NoteOut:
+    def get(self, user_id: int, note_id: int) -> NoteOut:
         note_db = self.note_db.get(note_id)
+        if not note_db.shared:
+            self.__validate_user__(user_id)
         return self._map_note(note_db)
 
-    def get_by_name(self, folder_id: int, name: str) -> NoteOut:
+    def get_by_name(self, user_id: int, folder_id: int, name: str) -> NoteOut:
         self.__check_notename_exist__(folder_id, name)
         note_db = self.note_db.get_by_name(folder_id, name)
         return self._map_note(note_db)
@@ -89,3 +78,27 @@ class NoteApi:
             self.__raise_nonempty_text_body__()
         elif type == NoteType.TEXT and text_body is None:
             self.__raise_empty_text_body__()
+
+    def __validate_user__(self, user_id: int):
+        if self.ctx.user.id != user_id:
+            raise HTTPException(status.HTTP_403_FORBIDDEN, f"Logged user and queried user do not match!")
+
+    def __check_notename_exist__(self, folder_id: int, name: str):
+        if not self.note_db.note_exists(folder_id, name):
+            raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, f"Note with name '{name}' doesn't exist")
+
+    def __check_notename_not_exist__(self, folder_id: int, name: str):
+        if self.note_db.note_exists(folder_id, name):
+            raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, f"Note with name '{name}' already exists")
+
+    def __raise_nonempty_note__(self, note_id: int):
+        msg = f"Note with id {note_id} cannot be deleted since it has nested lists. If you wish to recursively delete nested lists, re-request api with parameter force=true."
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
+
+    def __raise_nonempty_text_body__(self):
+        msg = f"Cannot create/update note, since it has type {NoteType.LIST} therefore it cannot have non-empty text_body field."
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
+
+    def __raise_empty_text_body__(self):
+        msg = f"Cannot create/update note, since it has type {NoteType.TEXT} therefore it cannot have empty text_body field."
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, msg)
