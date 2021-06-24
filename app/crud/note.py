@@ -54,3 +54,8 @@ class NoteDb:
 
         self.db.commit()
         return note
+
+    def delete(self, note_id: int):
+        note_db = self.get(note_id)
+        self.db.delete(note_db)
+        self.db.commit()

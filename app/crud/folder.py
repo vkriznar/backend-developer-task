@@ -52,3 +52,8 @@ class FolderDb:
 
         self.db.commit()
         return folder
+
+    def delete(self, folder_id: int):
+        folder = self.get(folder_id)
+        self.db.delete(folder)
+        self.db.commit()
