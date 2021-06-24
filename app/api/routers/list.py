@@ -1,4 +1,4 @@
-from typing import List
+# from typing import List
 from app.api.workers.list_api import ListApi
 from app.schemas.list import ListCreate, ListOut, ListUpdate
 from app.context.auth_context import AppContextAuth, get_auth_context
@@ -22,11 +22,11 @@ def delete_list(list_id: int, context: AppContextAuth = Depends(get_auth_context
     return ListApi(context).delete(list_id)
 
 
-@router.get("", response_model=List[ListOut], description="Get all lists for note")
+""" @router.get("", response_model=List[ListOut], description="Get all lists for note")
 def get_all(note_id: int, context: AppContextAuth = Depends(get_auth_context)):
     return ListApi(context).get_all(note_id)
 
 
 @router.get("/{id}", response_model=ListOut)
 def get(id: int, context: AppContextAuth = Depends(get_auth_context)):
-    return ListApi(context).get(id)
+    return ListApi(context).get(id) """

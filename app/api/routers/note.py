@@ -1,4 +1,5 @@
-from typing import List
+from app.crud.types import HeadingSort, SharedType
+from typing import List, Optional
 from app.api.workers.note_api import NoteApi
 from app.schemas.note import NoteCreate, NoteOut, NoteUpdate
 from app.context.auth_context import AppContextAuth, get_auth_context
@@ -23,8 +24,8 @@ def delete_note(user_id: int, note_id: int, force: bool, context: AppContextAuth
 
 
 @router.get("", response_model=List[NoteOut], description="Get all notes for user")
-def get_all(user_id: int, folder_id: int, context: AppContextAuth = Depends(get_auth_context)):
-    return NoteApi(context).get_all(user_id, folder_id)
+def get_all(folder_id: int, context: AppContextAuth = Depends(get_auth_context)):
+    return NoteApi(context).get_all(folder_id)
 
 
 @router.get("/{id}", response_model=NoteOut)

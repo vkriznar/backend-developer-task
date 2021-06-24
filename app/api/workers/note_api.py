@@ -1,8 +1,9 @@
+from app.crud.folder import FolderDb
 from app.context.auth_context import AppContextAuth
 from app.crud.models import Note
 from app.api.workers.list_api import ListApi
 from app.crud.list import ListDb
-from app.crud.types import NoteType
+from app.crud.types import HeadingSort, NoteType, SharedType
 from app.crud.user import UserDb
 from typing import List
 from app.crud.note import NoteDb
@@ -21,6 +22,7 @@ class NoteApi:
     def __init__(self, context: AppContextAuth):
         self.ctx = context
         self.db = context.db
+        self.folder_db = FolderDb(context)
         self.user_db = UserDb(context)
         self.note_db = NoteDb(context)
         self.list_db = ListDb(context)
@@ -53,11 +55,53 @@ class NoteApi:
 
         self.note_db.delete(note_id)
 
-    def get_all(self, user_id: int, folder_id: int) -> List[NoteOut]:
+    def get_all(self, folder_id: int) -> List[NoteOut]:
         notes_db = self.note_db.get_all(folder_id)
-        logged_user_id = self.ctx.user.id if hasattr(self.ctx, "user") else -2
-        filtered_notes = filter(lambda n: n.shared or logged_user_id == user_id, notes_db)
+
+        filtered_notes = filter(lambda n: self._filter_by_user(n, self.ctx.user.id), notes_db)
         return list(map(lambda n: self._map_note(n), filtered_notes))
+
+    def get_all_default(
+        self,
+        folder_id: int,
+        notes_per_page: int,
+        page_nr: int,
+        shared_filter: SharedType,
+        node_text_filter: str,
+        shared_sorting: SharedType,
+        heading_sorting: HeadingSort
+    ) -> List[NoteOut]:
+        notes_db = self.note_db.get_all(folder_id)
+
+        # Filter those that can be seen by logged in user
+        logged_user_id = self.ctx.user.id if hasattr(self.ctx, "user") else -2
+        notes = filter(lambda n: self._filter_by_user(n, logged_user_id), notes_db)
+
+        # Filter by public/private parameter
+        if shared_filter != SharedType.NONE:
+            notes = filter(lambda n: n.shared if shared_filter == SharedType.PUBLIC else not n.shared, notes)
+
+        notes = map(lambda n: self._map_note(n), notes)
+
+        # Filter by text value
+        if node_text_filter is not None:
+            notes = filter(lambda n: self._filter_by_text(n, node_text_filter), notes)
+
+        # Sort by shared/public parameter
+        if shared_sorting != SharedType.NONE:
+            notes = sorted(notes, key=lambda n: n.shared, reverse=(shared_sorting == SharedType.PUBLIC))
+
+        # Sort by heading (name) of note
+        if heading_sorting is not HeadingSort.NONE:
+            notes = sorted(notes, key=lambda n: n.name, reverse=(heading_sorting == HeadingSort.DESCENDING))
+
+        # Do pagination
+        final_notes = list(notes)
+        notes = [final_notes[i:i + notes_per_page] for i in range(0, len(list(final_notes)), notes_per_page)]
+
+        if len(notes) < page_nr:
+            return []
+        return notes[page_nr-1]
 
     def get(self, user_id: int, note_id: int) -> NoteOut:
         note_db = self.note_db.get(note_id)
@@ -70,8 +114,20 @@ class NoteApi:
         note_db = self.note_db.get_by_name(folder_id, name)
         return self._map_note(note_db)
 
+    def _filter_by_user(self, note: Note, logged_user_id: int) -> bool:
+        folder = self.folder_db.get(note.folder_id)
+        return note.shared or logged_user_id == folder.user_id
+
     def _map_note(self, note_db: Note) -> NoteOut:
         return NoteOut(**vars(note_db), lists=self.list_api.get_all(note_db.id))
+
+    def _filter_by_text(self, note: NoteOut, text: str):
+        if note.type == NoteType.TEXT:
+            return text in note.text_body
+        for list in note.lists:
+            if text in list.text_body:
+                return True
+        return False
 
     def _check_note_validity(self, type: NoteType, text_body: str):
         if type == NoteType.LIST and text_body is not None:
