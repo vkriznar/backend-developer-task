@@ -23,14 +23,14 @@ class NoteApi:
         if self.note_db.note_exists(folder_id, name):
             raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, f"Note with name '{name}' already exists")
 
-    def create_note(self, folder_id: int, note: NoteCreate) -> NoteOut:
+    def create(self, folder_id: int, note: NoteCreate) -> NoteOut:
         self.__check_notename_not_exist__(folder_id, note.name)
         return self.note_db.create(folder_id, note)
 
-    def update_note(self, note_id: int, note_update: NoteUpdate) -> NoteOut:
-        self.note_db.update(note_id, note_update)
+    def update(self, note_id: int, note_update: NoteUpdate) -> NoteOut:
+        return self.note_db.update(note_id, note_update)
 
-    def delete_note(self, note_id: int, force: bool):
+    def delete(self, note_id: int, force: bool):
         # Implement first api and lists
         pass
 

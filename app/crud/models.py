@@ -38,7 +38,7 @@ class Note(Base):
     text_body = Column(String(), nullable=False)
 
 
-class List(Base):
+class ListDbModel(Base):
     __tablename__ = "list"
 
     id = Column(Integer, primary_key=True, autoincrement=True)

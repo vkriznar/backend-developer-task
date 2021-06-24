@@ -23,14 +23,14 @@ class FolderApi:
         if self.folder_db.folder_exists(user_id, name):
             raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, f"Folder with name '{name}' already exists")
 
-    def create_folder(self, user_id: str, folder: FolderCreate) -> FolderOut:
+    def create(self, user_id: str, folder: FolderCreate) -> FolderOut:
         self.__check_foldername_not_exist__(user_id, folder.name)
         return self.folder_db.create(user_id, folder)
 
-    def update_folder(self, folder_id: int, folder_update: FolderUpdate) -> FolderOut:
+    def update(self, folder_id: int, folder_update: FolderUpdate) -> FolderOut:
         return self.folder_db.update(folder_id, folder_update)
 
-    def delete_folder(self, folder_id: int, force: bool):
+    def delete(self, folder_id: int, force: bool):
         # Implement first api for notes and lists
         pass
 

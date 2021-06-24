@@ -12,7 +12,7 @@ def create_note(folder_id: int, note: NoteCreate, context: AppContextAuth = Depe
     return NoteApi(context).create_note(folder_id, note)
 
 
-@router.put("/id", response_model=NoteOut, description="Update note with new name", status_code=200)
+@router.put("/id", response_model=NoteOut, description="Update note with new name")
 def update_note(note_id: int, note: NoteUpdate, context: AppContextAuth = Depends(get_auth_context)):
     return NoteApi(context).update_note(note_id, note)
 
