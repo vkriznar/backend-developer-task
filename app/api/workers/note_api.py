@@ -1,3 +1,5 @@
+from app.crud.models import Note
+from app.api.workers.list_api import ListApi
 from app.crud.list import ListDb
 from app.crud.types import NoteType
 from app.crud.user import UserDb
@@ -20,6 +22,7 @@ class NoteApi:
         self.user_db = UserDb(context)
         self.note_db = NoteDb(context)
         self.list_db = ListDb(context)
+        self.list_api = ListApi(context)
 
     def __check_notename_exist__(self, folder_id: int, name: str):
         if not self.note_db.note_exists(folder_id, name):
@@ -55,11 +58,17 @@ class NoteApi:
         self.note_db.delete(note_id)
 
     def get_all(self, folder_id: int) -> List[NoteOut]:
-        return self.note_db.get_all(folder_id)
+        notes_db = self.note_db.get_all(folder_id)
+        return list(map(lambda n: self._map_note(n), notes_db))
 
     def get(self, note_id: int) -> NoteOut:
-        return self.note_db.get(note_id)
+        note_db = self.note_db.get(note_id)
+        return self._map_note(note_db)
 
     def get_by_name(self, folder_id: int, name: str) -> NoteOut:
         self.__check_notename_exist__(folder_id, name)
-        return self.note_db.get_by_name(folder_id, name)
+        note_db = self.note_db.get_by_name(folder_id, name)
+        return self._map_note(note_db)
+
+    def _map_note(self, note_db: Note) -> NoteOut:
+        return NoteOut(**vars(note_db), lists=self.list_api.get_all(note_db.id))

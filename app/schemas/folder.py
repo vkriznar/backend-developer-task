@@ -1,3 +1,5 @@
+from typing import List
+from app.schemas.note import NoteOut
 from pydantic import BaseModel
 
 
@@ -18,7 +20,7 @@ class FolderDb(FolderBase):
 
 
 class FolderOut(FolderDb):
-    pass
+    notes: List[NoteOut]
 
     class Config:
         orm_mode = True

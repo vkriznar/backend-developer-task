@@ -1,4 +1,5 @@
-from typing import Optional
+from app.schemas.list import ListOut
+from typing import List, Optional
 from app.crud.types import NoteType
 from pydantic import BaseModel
 
@@ -25,7 +26,7 @@ class NoteDb(NoteBase):
 
 
 class NoteOut(NoteDb):
-    pass
+    lists: List[ListOut]
 
     class Config:
         orm_mode = True

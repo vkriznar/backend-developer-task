@@ -9,17 +9,17 @@ router = APIRouter(prefix="/users/{user_id}/folders")
 
 @router.post("", response_model=FolderOut, description="Create new folder for user", status_code=201)
 def create_folder(user_id: str, folder: FolderCreate, context: AppContextAuth = Depends(get_auth_context)):
-    return FolderApi(context).create_folder(user_id, folder)
+    return FolderApi(context).create(user_id, folder)
 
 
 @router.put("/id", response_model=FolderOut, description="Update folder with new name", status_code=200)
 def update_folder(folder_id: int, folder: FolderUpdate, context: AppContextAuth = Depends(get_auth_context)):
-    return FolderApi(context).update_folder(folder_id, folder)
+    return FolderApi(context).update(folder_id, folder)
 
 
 @router.delete("/id", description="Delete folder with id. Set force parameter to true if you want to recursively delete children notes.")
 def delete_folder(folder_id: int, force: bool, context: AppContextAuth = Depends(get_auth_context)):
-    return FolderApi(context).delete_folder(folder_id, force)
+    return FolderApi(context).delete(folder_id, force)
 
 
 @router.get("", response_model=List[FolderOut], description="Get all folders for user")
