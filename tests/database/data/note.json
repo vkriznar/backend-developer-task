@@ -21,10 +21,10 @@
         {
             "id": 3,
             "folder_id": 2,
-            "name": "not-shared-note-folder-2",
+            "name": "aaa not-shared-note-folder-2",
             "shared": false,
             "type": "TEXT",
-            "text_body": "not-shared-note-folder-2"
+            "text_body": "not-shared-note-folder-2, KEYWORD"
         },
         {
             "id": 4,

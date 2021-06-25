@@ -12,6 +12,12 @@ class ListDb:
     def __init__(self, context: AppContext):
         self.db = context.db
 
+    def list_exists(self, note_id: int, text_body: str) -> bool:
+        query = self.db.query(ListDbModel) \
+            .filter(ListDbModel.note_id == note_id) \
+            .filter(ListDbModel.text_body == text_body)
+        return self.db.query(query.exists()).scalar()
+
     def get_all(self, note_id: int) -> List[ListDbModel]:
         return self.db.query(ListDbModel).filter(ListDbModel.note_id == note_id).all()
 

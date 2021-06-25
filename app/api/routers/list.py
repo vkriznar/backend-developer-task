@@ -12,12 +12,12 @@ def create_list(note_id: int, list: ListCreate, context: AppContextAuth = Depend
     return ListApi(context).create(note_id, list)
 
 
-@router.put("/id", response_model=ListOut, description="Update list with new name")
+@router.put("/{list_id}", response_model=ListOut, description="Update list with new name")
 def update_list(list_id: int, list: ListUpdate, context: AppContextAuth = Depends(get_auth_context)):
     return ListApi(context).update(list_id, list)
 
 
-@router.delete("/id", description="Delete list with id.")
+@router.delete("/{list_id}", description="Delete list with id.")
 def delete_list(list_id: int, context: AppContextAuth = Depends(get_auth_context)):
     return ListApi(context).delete(list_id)
 

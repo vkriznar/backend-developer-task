@@ -41,11 +41,12 @@ class NoteApi:
         if note_update.text_body is not None:
             note = self.note_db.get(note_id)
             self._check_note_validity(note.type, note_update.text_body)
-        return self.note_db.update(note_id, note_update)
+        note_updated = self.note_db.update(note_id, note_update)
+        return self._map_note(note_updated)
 
     def delete(self, user_id: int, note_id: int, force: bool):
         self.__validate_user__(user_id)
-        note = self.get(note_id)
+        note = self.get(user_id, note_id)
         if note.type == NoteType.LIST:
             note_lists = self.list_db.get_all(note.id)
             if len(note_lists) > 0 and not force:
@@ -58,7 +59,9 @@ class NoteApi:
     def get_all(self, folder_id: int) -> List[NoteOut]:
         notes_db = self.note_db.get_all_for_id(folder_id)
 
-        filtered_notes = filter(lambda n: self._filter_by_user(n, self.ctx.user.id), notes_db)
+        logged_user_id = self.ctx.user.id if hasattr(self.ctx, "user") else -2
+
+        filtered_notes = filter(lambda n: self._filter_by_user(n, logged_user_id), notes_db)
         return list(map(lambda n: self._map_note(n), filtered_notes))
 
     def get_all_default(
@@ -120,6 +123,7 @@ class NoteApi:
         return note.shared or logged_user_id == folder.user_id
 
     def _map_note(self, note_db: Note) -> NoteOut:
+        print(f"Mapping note with id {note_db.id}")
         return NoteOut(**vars(note_db), lists=self.list_api.get_all(note_db.id))
 
     def _filter_by_text(self, note: NoteOut, text: str):
