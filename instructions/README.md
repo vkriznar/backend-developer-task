@@ -4,3 +4,7 @@ Setup process:
 * Install all python dependencies `pip install -r requirements.txt`
 * Run Python: FastAPI: `python -m uvicorn app.main:app --reload`
 * Go to `localhost:8000/docs`. FastAPI by itself provides "frontend" for testing api's.
+
+Testing:
+* Make sure to follow setup process steps up to and including `Install all python dependencies`
+* After that you can simply run `pytest` with optional flag `--cov=app` if you want to see the test coverage.
