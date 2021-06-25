@@ -1,5 +1,8 @@
 # Notes API
 
+Finished with creating a notes REST API. Instructions for running the app aswell as running tests is found in `instruction/README.md`. Test coverage of 95% has been achieved. Most of the tests was done by testing endpoints with mocked database that is recreated for every test group, so tests don't intervene with actual data. If you have any questions or concerns please feel free to contact me at krizovid@gmail.com
+
+
 Create REST API that allows users to manage their notes.
 Notes can be organized into folders for easier management.
 API should allow user authentication through basic HTTP authentication (username and password).
