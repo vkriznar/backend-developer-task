@@ -7,6 +7,6 @@ from app.api.workers.user_api import UserApi
 router = APIRouter(prefix="/users")
 
 
-@router.post("", response_model=UserOut)
+@router.post("", response_model=UserOut, status_code=201)
 def create_user(user: UserCreate, context: AppContext = Depends(get_context)):
     return UserApi(context).create_user(user)

@@ -3,13 +3,15 @@ from tests.database.db_helper import DbHelper
 from fastapi import FastAPI
 from alembic import config, command
 from app.context.context import get_plain_context
-from app.context.settings import AppSettings
+from app.context.settings import AppSettings, get_app_settings
 from app.api.router import api_router
 
 
 def create_test_client():
     app = FastAPI(title="TEST Celtra app")
     app.include_router(api_router)
+
+    app.dependency_overrides[get_app_settings] = get_test_settings
 
     alembic_cfg = config.Config(
         config_args={

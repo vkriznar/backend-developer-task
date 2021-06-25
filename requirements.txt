@@ -4,7 +4,7 @@ cffi==1.14.5
 click==8.0.1
 colorama==0.4.4
 cryptography==3.4.7
-fastapi==0.65.2
+fastapi==0.63.0
 greenlet==1.1.0
 h11==0.12.0
 jwt==1.2.0

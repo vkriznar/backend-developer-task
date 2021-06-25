@@ -34,13 +34,14 @@ class FolderApi:
 
     def update(self, user_id: int, folder_id: int, folder_update: FolderUpdate) -> FolderOut:
         self.__validate_user__(user_id)
-        return self.folder_db.update(folder_id, folder_update)
+        updated_folder = self.folder_db.update(folder_id, folder_update)
+        return self._map_folder(updated_folder)
 
     def delete(self, user_id: int, folder_id: int, force: bool):
         self.__validate_user__(user_id)
 
         folder = self.get(folder_id)
-        folder_notes = self.note_db.get_all(folder.id)
+        folder_notes = self.note_db.get_all_for_id(folder.id)
         if len(folder_notes) > 0 and not force:
             self.__raise_nonempty_folder__(folder.id)
         for note in folder_notes:
@@ -56,7 +57,7 @@ class FolderApi:
         folders_db = self.folder_db.get_all_for_id(user_id)
         return list(map(lambda f: self._map_folder(f), folders_db))
 
-    def get(self, user_id, folder_id: int) -> FolderOut:
+    def get(self, folder_id: int) -> FolderOut:
         folder_db = self.folder_db.get(folder_id)
         return self._map_folder(folder_db)
 
@@ -66,6 +67,7 @@ class FolderApi:
         return self._map_folder(folder_db)
 
     def _map_folder(self, folder_db: Folder) -> FolderOut:
+        print(f"Mapping folder with id: {folder_db.id}")
         return FolderOut(**vars(folder_db), notes=self.note_api.get_all(folder_db.id))
 
     def __validate_user__(self, user_id: int):

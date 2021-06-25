@@ -1,0 +1,1144 @@
+versions pytest-6.2.4, py-1.10.0, python-3.9.5.final.0
+cwd=c:\Users\vkriznar\Documents\GitHub\backend-developer-task
+args=('--override-ini', 'junit_family=xunit1', '--rootdir', 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task', '--junit-xml=C:\\Users\\vkriznar\\AppData\\Local\\Temp\\tmp-13592ta4iApfJLxmw.xml', '--debug', './tests/routes/folder_test.py::FolderTest::test_get_all')
+
+  pytest_cmdline_main [hook]
+      config: <_pytest.config.Config object at 0x0000020036782880>
+    pytest_plugin_registered [hook]
+        plugin: <Session backend-developer-task exitstatus='<UNSET>' testsfailed=0 testscollected=0>
+        manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+    finish pytest_plugin_registered --> [] [hook]
+    pytest_configure [hook]
+        config: <_pytest.config.Config object at 0x0000020036782880>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x0000020036F77160>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x0000020036F6D790>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: faulthandler [assertion]
+      pytest_configure [hook]
+          config: <_pytest.config.Config object at 0x0000020036782880>
+      finish pytest_configure --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.faulthandler.FaultHandlerHooks object at 0x0000020036F77460>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.junitxml.LogXML object at 0x0000020036F776D0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: pdb [assertion]
+    early skip of rewriting module: cmd [assertion]
+    early skip of rewriting module: code [assertion]
+    early skip of rewriting module: codeop [assertion]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x0000020036782880>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\mark\\__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\main.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\runner.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\fixtures.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\helpconfig.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\python.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\terminal.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\debugging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\unittest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\capture.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\skipping.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\tmpdir.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\monkeypatch.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\recwarn.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\pastebin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.nose' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\nose.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\assertion\\__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\junitxml.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\doctest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\cacheprovider.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.freeze_support' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\freeze_support.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\setuponly.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\setupplan.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\stepwise.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\warnings.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\logging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\reports.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unraisableexception' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\unraisableexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.threadexception' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\threadexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\faulthandler.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pylama.pytest' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\pylama\\pytest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pytest_cov.plugin' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\pytest_cov\\plugin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io.TextIOWrapper name='<tempfile._TemporaryFileWrapper object at 0x0000020036F4D670>' mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=7 _state='suspended' tmpfile=<_io.TextIOWrapper name='<tempfile._TemporaryFileWrapper object at 0x0000020036F40100>' mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=3 _state='started' tmpfile=<_io.TextIOWrapper name='nul' mode='r' encoding='cp1250'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x0000020036F77160>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x0000020036F6D790>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.faulthandler.FaultHandlerHooks object at 0x0000020036F77460>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.junitxml.LogXML object at 0x0000020036F776D0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x0000020036F77A30>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x0000020036F97EB0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+    finish pytest_configure --> [] [hook]
+    pytest_sessionstart [hook]
+        session: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x0000020036782880>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\mark\\__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\main.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\runner.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\fixtures.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\helpconfig.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\python.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\terminal.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\debugging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\unittest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\capture.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\skipping.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\tmpdir.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\monkeypatch.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\recwarn.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\pastebin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.nose' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\nose.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\assertion\\__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\junitxml.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\doctest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\cacheprovider.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.freeze_support' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\freeze_support.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\setuponly.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\setupplan.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\stepwise.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\warnings.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\logging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\reports.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unraisableexception' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\unraisableexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.threadexception' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\threadexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\faulthandler.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pylama.pytest' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\pylama\\pytest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pytest_cov.plugin' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\pytest_cov\\plugin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io.TextIOWrapper name='<tempfile._TemporaryFileWrapper object at 0x0000020036F4D670>' mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=7 _state='suspended' tmpfile=<_io.TextIOWrapper name='<tempfile._TemporaryFileWrapper object at 0x0000020036F40100>' mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=3 _state='started' tmpfile=<_io.TextIOWrapper name='nul' mode='r' encoding='cp1250'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x0000020036F77160>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x0000020036F6D790>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.faulthandler.FaultHandlerHooks object at 0x0000020036F77460>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.junitxml.LogXML object at 0x0000020036F776D0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x0000020036F77A30>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x0000020036F97EB0>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.fixtures.FixtureManager object at 0x0000020036FA7670>
+          manager: <_pytest.config.PytestPluginManager object at 0x0000020033F16CD0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_report_header [hook]
+          config: <_pytest.config.Config object at 0x0000020036782880>
+          startdir: c:\Users\vkriznar\Documents\GitHub\backend-developer-task
+      early skip of rewriting module: email.parser [assertion]
+      early skip of rewriting module: email.feedparser [assertion]
+      early skip of rewriting module: email.errors [assertion]
+      early skip of rewriting module: email._policybase [assertion]
+      early skip of rewriting module: email.header [assertion]
+      early skip of rewriting module: email.quoprimime [assertion]
+      early skip of rewriting module: email.base64mime [assertion]
+      early skip of rewriting module: base64 [assertion]
+      early skip of rewriting module: email.charset [assertion]
+      early skip of rewriting module: email.encoders [assertion]
+      early skip of rewriting module: quopri [assertion]
+      early skip of rewriting module: email.utils [assertion]
+      early skip of rewriting module: email._parseaddr [assertion]
+      early skip of rewriting module: calendar [assertion]
+      early skip of rewriting module: email.message [assertion]
+      early skip of rewriting module: uu [assertion]
+      early skip of rewriting module: email._encoded_words [assertion]
+      early skip of rewriting module: email.iterators [assertion]
+      finish pytest_report_header --> [['rootdir: c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task', 'plugins: pylama-7.7.1, cov-2.12.1'], ['using: pytest-6.2.4 pylib-1.10.0', 'setuptools registered plugins:', '  pylama-7.7.1 at c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\pylama\\pytest.py', '  pytest-cov-2.12.1 at c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\pytest_cov\\plugin.py']] [hook]
+    finish pytest_sessionstart --> [] [hook]
+    pytest_collection [hook]
+        session: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+    perform_collect <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0> ['./tests/routes/folder_test.py::FolderTest::test_get_all'] [collection]
+        pytest_collectstart [hook]
+            collector: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        finish pytest_collectstart --> [] [hook]
+        pytest_make_collect_report [hook]
+            collector: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        processing argument (local('c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\tests\\routes\\folder_test.py'), ['FolderTest', 'test_get_all']) [collection]
+            pytest_ignore_collect [hook]
+                path: c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\__init__.py
+                config: <_pytest.config.Config object at 0x0000020036782880>
+            finish pytest_ignore_collect --> None [hook]
+            pytest_collect_file [hook]
+                path: c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\__init__.py
+                parent: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              pytest_pycollect_makemodule [hook]
+                  path: c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\__init__.py
+                  parent: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              finish pytest_pycollect_makemodule --> <Package tests> [hook]
+            finish pytest_collect_file --> [<Package tests>] [hook]
+            pytest_collect_file [hook]
+                path: c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\routes\folder_test.py
+                parent: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              pytest_pycollect_makemodule [hook]
+                  path: c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\routes\folder_test.py
+                  parent: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              finish pytest_pycollect_makemodule --> <Module tests/routes/folder_test.py> [hook]
+            finish pytest_collect_file --> [<Module tests/routes/folder_test.py>] [hook]
+          matchnodes [<Module tests/routes/folder_test.py>] ['FolderTest', 'test_get_all'] [collection]
+              pytest_collectstart [hook]
+                  collector: <Module tests/routes/folder_test.py>
+              finish pytest_collectstart --> [] [hook]
+              pytest_make_collect_report [hook]
+                  collector: <Module tests/routes/folder_test.py>
+              find_module called for: folder_test [assertion]
+              matched test file (was specified on cmdline): 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\tests\\routes\\folder_test.py' [assertion]
+              found cached rewritten pyc for c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\routes\folder_test.py [assertion]
+              matched marked file 'tests' (from 'tests') [assertion]
+              find_module called for: tests [assertion]
+              found cached rewritten pyc for c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\__init__.py [assertion]
+              matched marked file 'tests.lib' (from 'tests') [assertion]
+              find_module called for: tests.lib [assertion]
+              found cached rewritten pyc for c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\lib\__init__.py [assertion]
+              matched marked file 'tests.lib.base_testing' (from 'tests') [assertion]
+              find_module called for: tests.lib.base_testing [assertion]
+              found cached rewritten pyc for c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\lib\base_testing.py [assertion]
+              find_module called for: tests.lib.test_context [assertion]
+              matched test file 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\tests\\lib\\test_context.py' [assertion]
+              found cached rewritten pyc for c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\lib\test_context.py [assertion]
+              matched marked file 'tests.database' (from 'tests') [assertion]
+              find_module called for: tests.database [assertion]
+              found cached rewritten pyc for c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\database\__init__.py [assertion]
+              matched marked file 'tests.database.db_helper' (from 'tests') [assertion]
+              find_module called for: tests.database.db_helper [assertion]
+              found cached rewritten pyc for c:\Users\vkriznar\Documents\GitHub\backend-developer-task\tests\database\db_helper.py [assertion]
+              early skip of rewriting module: pydoc [assertion]
+              early skip of rewriting module: sysconfig [assertion]
+              early skip of rewriting module: sqlalchemy [assertion]
+              early skip of rewriting module: sqlalchemy.util [assertion]
+              early skip of rewriting module: sqlalchemy.util._collections [assertion]
+              early skip of rewriting module: sqlalchemy.util.compat [assertion]
+              early skip of rewriting module: dataclasses [assertion]
+              early skip of rewriting module: sqlalchemy.cimmutabledict [assertion]
+              early skip of rewriting module: sqlalchemy.util._preloaded [assertion]
+              early skip of rewriting module: sqlalchemy.util.concurrency [assertion]
+              early skip of rewriting module: greenlet [assertion]
+              early skip of rewriting module: greenlet._greenlet [assertion]
+              early skip of rewriting module: sqlalchemy.util._concurrency_py3k [assertion]
+              early skip of rewriting module: asyncio [assertion]
+              early skip of rewriting module: asyncio.base_events [assertion]
+              early skip of rewriting module: concurrent [assertion]
+              early skip of rewriting module: concurrent.futures [assertion]
+              early skip of rewriting module: concurrent.futures._base [assertion]
+              early skip of rewriting module: ssl [assertion]
+              early skip of rewriting module: _ssl [assertion]
+              early skip of rewriting module: asyncio.constants [assertion]
+              early skip of rewriting module: asyncio.coroutines [assertion]
+              early skip of rewriting module: asyncio.base_futures [assertion]
+              early skip of rewriting module: asyncio.format_helpers [assertion]
+              early skip of rewriting module: asyncio.log [assertion]
+              early skip of rewriting module: asyncio.events [assertion]
+              early skip of rewriting module: contextvars [assertion]
+              early skip of rewriting module: _contextvars [assertion]
+              early skip of rewriting module: _asyncio [assertion]
+              early skip of rewriting module: asyncio.exceptions [assertion]
+              early skip of rewriting module: asyncio.base_tasks [assertion]
+              early skip of rewriting module: asyncio.futures [assertion]
+              early skip of rewriting module: asyncio.protocols [assertion]
+              early skip of rewriting module: asyncio.sslproto [assertion]
+              early skip of rewriting module: asyncio.transports [assertion]
+              early skip of rewriting module: asyncio.staggered [assertion]
+              early skip of rewriting module: asyncio.locks [assertion]
+              early skip of rewriting module: asyncio.tasks [assertion]
+              early skip of rewriting module: asyncio.trsock [assertion]
+              early skip of rewriting module: asyncio.runners [assertion]
+              early skip of rewriting module: asyncio.queues [assertion]
+              early skip of rewriting module: asyncio.streams [assertion]
+              early skip of rewriting module: asyncio.subprocess [assertion]
+              early skip of rewriting module: asyncio.threads [assertion]
+              early skip of rewriting module: asyncio.windows_events [assertion]
+              early skip of rewriting module: _overlapped [assertion]
+              early skip of rewriting module: asyncio.base_subprocess [assertion]
+              early skip of rewriting module: asyncio.proactor_events [assertion]
+              early skip of rewriting module: asyncio.selector_events [assertion]
+              early skip of rewriting module: asyncio.windows_utils [assertion]
+              early skip of rewriting module: sqlalchemy.util.langhelpers [assertion]
+              early skip of rewriting module: sqlalchemy.exc [assertion]
+              early skip of rewriting module: sqlalchemy.util.deprecations [assertion]
+              early skip of rewriting module: sqlalchemy.engine [assertion]
+              early skip of rewriting module: sqlalchemy.engine.events [assertion]
+              early skip of rewriting module: sqlalchemy.engine.base [assertion]
+              early skip of rewriting module: sqlalchemy.engine.interfaces [assertion]
+              early skip of rewriting module: sqlalchemy.sql [assertion]
+              early skip of rewriting module: sqlalchemy.sql.base [assertion]
+              early skip of rewriting module: sqlalchemy.sql.roles [assertion]
+              early skip of rewriting module: sqlalchemy.sql.visitors [assertion]
+              early skip of rewriting module: sqlalchemy.sql.traversals [assertion]
+              early skip of rewriting module: sqlalchemy.sql.operators [assertion]
+              early skip of rewriting module: sqlalchemy.inspection [assertion]
+              early skip of rewriting module: sqlalchemy.sql.compiler [assertion]
+              early skip of rewriting module: sqlalchemy.sql.coercions [assertion]
+              early skip of rewriting module: sqlalchemy.sql.crud [assertion]
+              early skip of rewriting module: sqlalchemy.sql.dml [assertion]
+              early skip of rewriting module: sqlalchemy.types [assertion]
+              early skip of rewriting module: sqlalchemy.sql.sqltypes [assertion]
+              early skip of rewriting module: sqlalchemy.sql.elements [assertion]
+              early skip of rewriting module: sqlalchemy.sql.type_api [assertion]
+              early skip of rewriting module: sqlalchemy.sql.annotation [assertion]
+              early skip of rewriting module: sqlalchemy.event [assertion]
+              early skip of rewriting module: sqlalchemy.event.api [assertion]
+              early skip of rewriting module: sqlalchemy.event.base [assertion]
+              early skip of rewriting module: sqlalchemy.event.attr [assertion]
+              early skip of rewriting module: sqlalchemy.event.legacy [assertion]
+              early skip of rewriting module: sqlalchemy.event.registry [assertion]
+              early skip of rewriting module: sqlalchemy.processors [assertion]
+              early skip of rewriting module: sqlalchemy.cprocessors [assertion]
+              early skip of rewriting module: sqlalchemy.sql.util [assertion]
+              early skip of rewriting module: sqlalchemy.sql.ddl [assertion]
+              early skip of rewriting module: sqlalchemy.util.topological [assertion]
+              early skip of rewriting module: sqlalchemy.sql.schema [assertion]
+              early skip of rewriting module: sqlalchemy.sql.selectable [assertion]
+              early skip of rewriting module: sqlalchemy.sql.functions [assertion]
+              early skip of rewriting module: sqlalchemy.sql.expression [assertion]
+              early skip of rewriting module: sqlalchemy.sql.lambdas [assertion]
+              early skip of rewriting module: sqlalchemy.sql.events [assertion]
+              early skip of rewriting module: sqlalchemy.sql.default_comparator [assertion]
+              early skip of rewriting module: sqlalchemy.sql.naming [assertion]
+              early skip of rewriting module: sqlalchemy.engine.util [assertion]
+              early skip of rewriting module: sqlalchemy.log [assertion]
+              early skip of rewriting module: sqlalchemy.engine.create [assertion]
+              early skip of rewriting module: sqlalchemy.engine.url [assertion]
+              early skip of rewriting module: sqlalchemy.dialects [assertion]
+              early skip of rewriting module: sqlalchemy.engine.mock [assertion]
+              early skip of rewriting module: sqlalchemy.pool [assertion]
+              early skip of rewriting module: sqlalchemy.pool.events [assertion]
+              early skip of rewriting module: sqlalchemy.pool.base [assertion]
+              early skip of rewriting module: sqlalchemy.pool.dbapi_proxy [assertion]
+              early skip of rewriting module: sqlalchemy.pool.impl [assertion]
+              early skip of rewriting module: sqlalchemy.util.queue [assertion]
+              early skip of rewriting module: sqlalchemy.engine.cursor [assertion]
+              early skip of rewriting module: sqlalchemy.engine.result [assertion]
+              early skip of rewriting module: sqlalchemy.engine.row [assertion]
+              early skip of rewriting module: sqlalchemy.cresultproxy [assertion]
+              early skip of rewriting module: sqlalchemy.engine.reflection [assertion]
+              early skip of rewriting module: sqlalchemy.schema [assertion]
+              early skip of rewriting module: sqlalchemy.events [assertion]
+              early skip of rewriting module: sqlalchemy.engine.default [assertion]
+              early skip of rewriting module: sqlalchemy.engine.characteristics [assertion]
+              early skip of rewriting module: sqlalchemy.orm [assertion]
+              early skip of rewriting module: sqlalchemy.orm.exc [assertion]
+              early skip of rewriting module: sqlalchemy.orm.mapper [assertion]
+              early skip of rewriting module: sqlalchemy.orm.attributes [assertion]
+              early skip of rewriting module: sqlalchemy.orm.collections [assertion]
+              early skip of rewriting module: sqlalchemy.orm.base [assertion]
+              early skip of rewriting module: sqlalchemy.orm.interfaces [assertion]
+              early skip of rewriting module: sqlalchemy.orm.path_registry [assertion]
+              early skip of rewriting module: sqlalchemy.orm.instrumentation [assertion]
+              early skip of rewriting module: sqlalchemy.orm.state [assertion]
+              early skip of rewriting module: sqlalchemy.orm.loading [assertion]
+              early skip of rewriting module: sqlalchemy.orm.strategy_options [assertion]
+              early skip of rewriting module: sqlalchemy.orm.util [assertion]
+              early skip of rewriting module: sqlalchemy.future [assertion]
+              early skip of rewriting module: sqlalchemy.future.engine [assertion]
+              early skip of rewriting module: sqlalchemy.orm.properties [assertion]
+              early skip of rewriting module: sqlalchemy.orm.descriptor_props [assertion]
+              early skip of rewriting module: sqlalchemy.orm.relationships [assertion]
+              early skip of rewriting module: sqlalchemy.orm.context [assertion]
+              early skip of rewriting module: sqlalchemy.orm.decl_api [assertion]
+              early skip of rewriting module: sqlalchemy.orm.clsregistry [assertion]
+              early skip of rewriting module: sqlalchemy.orm.decl_base [assertion]
+              early skip of rewriting module: sqlalchemy.orm.identity [assertion]
+              early skip of rewriting module: sqlalchemy.orm.query [assertion]
+              early skip of rewriting module: sqlalchemy.orm.scoping [assertion]
+              early skip of rewriting module: sqlalchemy.orm.session [assertion]
+              early skip of rewriting module: sqlalchemy.orm.persistence [assertion]
+              early skip of rewriting module: sqlalchemy.orm.evaluator [assertion]
+              early skip of rewriting module: sqlalchemy.orm.sync [assertion]
+              early skip of rewriting module: sqlalchemy.orm.unitofwork [assertion]
+              early skip of rewriting module: sqlalchemy.orm.events [assertion]
+              early skip of rewriting module: sqlalchemy.orm.dynamic [assertion]
+              early skip of rewriting module: sqlalchemy.orm.strategies [assertion]
+              early skip of rewriting module: sqlalchemy.orm.dependency [assertion]
+              early skip of rewriting module: sqlalchemy.ext [assertion]
+              early skip of rewriting module: sqlalchemy.ext.baked [assertion]
+              early skip of rewriting module: app [assertion]
+              early skip of rewriting module: app.context [assertion]
+              early skip of rewriting module: app.context.context [assertion]
+              early skip of rewriting module: app.context.settings [assertion]
+              early skip of rewriting module: pydantic [assertion]
+              early skip of rewriting module: pydantic.dataclasses [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.class_validators [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.errors [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.typing [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: typing_extensions [assertion]
+              early skip of rewriting module: pydantic.utils [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.version [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.error_wrappers [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.json [assertion]
+              early skip of rewriting module: ipaddress [assertion]
+              early skip of rewriting module: pydantic.color [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: colorsys [assertion]
+              early skip of rewriting module: pydantic.types [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.validators [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.datetime_parse [assertion]
+              early skip of rewriting module: pydantic.fields [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.main [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.parse [assertion]
+              early skip of rewriting module: pydantic.schema [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.networks [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.annotated_types [assertion]
+              early skip of rewriting module: pydantic.decorator [assertion]
+              early skip of rewriting module: pydantic.env_settings [assertion]
+              early skip of rewriting module: backports_abc [assertion]
+              early skip of rewriting module: pydantic.tools [assertion]
+              early skip of rewriting module: fastapi [assertion]
+              early skip of rewriting module: starlette [assertion]
+              early skip of rewriting module: starlette.status [assertion]
+              early skip of rewriting module: fastapi.applications [assertion]
+              early skip of rewriting module: fastapi.routing [assertion]
+              early skip of rewriting module: fastapi.params [assertion]
+              early skip of rewriting module: fastapi.datastructures [assertion]
+              early skip of rewriting module: starlette.datastructures [assertion]
+              early skip of rewriting module: starlette.concurrency [assertion]
+              early skip of rewriting module: starlette.types [assertion]
+              early skip of rewriting module: fastapi.dependencies [assertion]
+              early skip of rewriting module: fastapi.dependencies.models [assertion]
+              early skip of rewriting module: fastapi.security [assertion]
+              early skip of rewriting module: fastapi.security.api_key [assertion]
+              early skip of rewriting module: fastapi.openapi [assertion]
+              early skip of rewriting module: fastapi.openapi.models [assertion]
+              early skip of rewriting module: fastapi.logger [assertion]
+              early skip of rewriting module: email_validator [assertion]
+              early skip of rewriting module: fastapi.security.base [assertion]
+              early skip of rewriting module: starlette.exceptions [assertion]
+              early skip of rewriting module: http [assertion]
+              early skip of rewriting module: starlette.requests [assertion]
+              early skip of rewriting module: http.cookies [assertion]
+              early skip of rewriting module: starlette.formparsers [assertion]
+              early skip of rewriting module: multipart [assertion]
+              early skip of rewriting module: multipart._version [assertion]
+              early skip of rewriting module: multipart.multipart [assertion]
+              early skip of rewriting module: six [assertion]
+              early skip of rewriting module: multipart.decoders [assertion]
+              early skip of rewriting module: multipart.exceptions [assertion]
+              early skip of rewriting module: urlparse [assertion]
+              early skip of rewriting module: starlette.responses [assertion]
+              early skip of rewriting module: mimetypes [assertion]
+              early skip of rewriting module: starlette.background [assertion]
+              early skip of rewriting module: aiofiles [assertion]
+              early skip of rewriting module: fastapi.security.http [assertion]
+              early skip of rewriting module: fastapi.exceptions [assertion]
+              early skip of rewriting module: fastapi.security.utils [assertion]
+              early skip of rewriting module: fastapi.security.oauth2 [assertion]
+              early skip of rewriting module: fastapi.param_functions [assertion]
+              early skip of rewriting module: fastapi.security.open_id_connect_url [assertion]
+              early skip of rewriting module: fastapi.dependencies.utils [assertion]
+              early skip of rewriting module: fastapi.concurrency [assertion]
+              early skip of rewriting module: fastapi.utils [assertion]
+              early skip of rewriting module: fastapi.openapi.constants [assertion]
+              early skip of rewriting module: starlette.websockets [assertion]
+              early skip of rewriting module: fastapi.encoders [assertion]
+              early skip of rewriting module: fastapi.types [assertion]
+              early skip of rewriting module: starlette.routing [assertion]
+              early skip of rewriting module: starlette.convertors [assertion]
+              early skip of rewriting module: fastapi.exception_handlers [assertion]
+              early skip of rewriting module: fastapi.openapi.docs [assertion]
+              early skip of rewriting module: fastapi.openapi.utils [assertion]
+              early skip of rewriting module: http.client [assertion]
+              early skip of rewriting module: fastapi.responses [assertion]
+              early skip of rewriting module: ujson [assertion]
+              early skip of rewriting module: orjson [assertion]
+              early skip of rewriting module: starlette.applications [assertion]
+              early skip of rewriting module: starlette.middleware [assertion]
+              early skip of rewriting module: starlette.middleware.base [assertion]
+              early skip of rewriting module: starlette.middleware.errors [assertion]
+              early skip of rewriting module: html [assertion]
+              early skip of rewriting module: html.entities [assertion]
+              early skip of rewriting module: fastapi.background [assertion]
+              early skip of rewriting module: fastapi.requests [assertion]
+              early skip of rewriting module: fastapi.websockets [assertion]
+              early skip of rewriting module: alembic [assertion]
+              early skip of rewriting module: alembic.context [assertion]
+              early skip of rewriting module: alembic.runtime [assertion]
+              early skip of rewriting module: alembic.runtime.environment [assertion]
+              early skip of rewriting module: alembic.runtime.migration [assertion]
+              early skip of rewriting module: sqlalchemy.engine.strategies [assertion]
+              early skip of rewriting module: alembic.ddl [assertion]
+              early skip of rewriting module: alembic.ddl.mssql [assertion]
+              early skip of rewriting module: sqlalchemy.ext.compiler [assertion]
+              early skip of rewriting module: alembic.ddl.base [assertion]
+              early skip of rewriting module: alembic.util [assertion]
+              early skip of rewriting module: alembic.util.compat [assertion]
+              early skip of rewriting module: alembic.util.exc [assertion]
+              early skip of rewriting module: alembic.util.langhelpers [assertion]
+              early skip of rewriting module: alembic.util.messaging [assertion]
+              early skip of rewriting module: alembic.util.sqla_compat [assertion]
+              early skip of rewriting module: fcntl [assertion]
+              early skip of rewriting module: alembic.util.pyfiles [assertion]
+              early skip of rewriting module: mako [assertion]
+              early skip of rewriting module: mako.exceptions [assertion]
+              early skip of rewriting module: mako.compat [assertion]
+              early skip of rewriting module: mako.util [assertion]
+              early skip of rewriting module: timeit [assertion]
+              early skip of rewriting module: mako.ext [assertion]
+              early skip of rewriting module: mako.ext.pygmentplugin [assertion]
+              early skip of rewriting module: pygments [assertion]
+              early skip of rewriting module: mako.filters [assertion]
+              early skip of rewriting module: markupsafe [assertion]
+              early skip of rewriting module: markupsafe._speedups [assertion]
+              early skip of rewriting module: mako.template [assertion]
+              early skip of rewriting module: mako.cache [assertion]
+              early skip of rewriting module: mako.codegen [assertion]
+              early skip of rewriting module: mako.ast [assertion]
+              early skip of rewriting module: mako.pyparser [assertion]
+              early skip of rewriting module: mako._ast_util [assertion]
+              early skip of rewriting module: mako.parsetree [assertion]
+              early skip of rewriting module: mako.pygen [assertion]
+              early skip of rewriting module: mako.runtime [assertion]
+              early skip of rewriting module: mako.lexer [assertion]
+              early skip of rewriting module: alembic.ddl.impl [assertion]
+              early skip of rewriting module: alembic.ddl.mysql [assertion]
+              early skip of rewriting module: alembic.autogenerate [assertion]
+              early skip of rewriting module: alembic.autogenerate.api [assertion]
+              early skip of rewriting module: alembic.autogenerate.compare [assertion]
+              early skip of rewriting module: alembic.autogenerate.render [assertion]
+              early skip of rewriting module: alembic.operations [assertion]
+              early skip of rewriting module: alembic.operations.toimpl [assertion]
+              early skip of rewriting module: alembic.operations.ops [assertion]
+              early skip of rewriting module: alembic.operations.schemaobj [assertion]
+              early skip of rewriting module: alembic.operations.base [assertion]
+              early skip of rewriting module: alembic.operations.batch [assertion]
+              early skip of rewriting module: alembic.autogenerate.rewriter [assertion]
+              early skip of rewriting module: alembic.ddl.oracle [assertion]
+              early skip of rewriting module: alembic.ddl.postgresql [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.base [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.array [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.hstore [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.json [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.ranges [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.pg8000 [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.psycopg2 [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.psycopg2cffi [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.pygresql [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.pypostgresql [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.dml [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.ext [assertion]
+              early skip of rewriting module: sqlalchemy.dialects.postgresql.asyncpg [assertion]
+              early skip of rewriting module: alembic.ddl.sqlite [assertion]
+              early skip of rewriting module: alembic.op [assertion]
+              early skip of rewriting module: alembic.config [assertion]
+              early skip of rewriting module: alembic.command [assertion]
+              early skip of rewriting module: alembic.script [assertion]
+              early skip of rewriting module: alembic.script.base [assertion]
+              early skip of rewriting module: dateutil [assertion]
+              early skip of rewriting module: dateutil._version [assertion]
+              early skip of rewriting module: dateutil.tz [assertion]
+              early skip of rewriting module: dateutil.tz.tz [assertion]
+              early skip of rewriting module: six.moves [assertion]
+              early skip of rewriting module: dateutil.tz._common [assertion]
+              early skip of rewriting module: dateutil.tz._factories [assertion]
+              early skip of rewriting module: dateutil.tz.win [assertion]
+              early skip of rewriting module: alembic.script.revision [assertion]
+              early skip of rewriting module: alembic.script.write_hooks [assertion]
+              early skip of rewriting module: app.api [assertion]
+              early skip of rewriting module: app.api.router [assertion]
+              early skip of rewriting module: app.api.routers [assertion]
+              early skip of rewriting module: app.api.routers.auth [assertion]
+              early skip of rewriting module: app.context.auth [assertion]
+              early skip of rewriting module: app.api.workers [assertion]
+              early skip of rewriting module: app.api.workers.user_api [assertion]
+              early skip of rewriting module: app.crud [assertion]
+              early skip of rewriting module: app.crud.user [assertion]
+              early skip of rewriting module: app.crud.models [assertion]
+              early skip of rewriting module: app.crud.types [assertion]
+              early skip of rewriting module: sqlalchemy.ext.declarative [assertion]
+              early skip of rewriting module: sqlalchemy.ext.declarative.extensions [assertion]
+              early skip of rewriting module: app.schemas [assertion]
+              early skip of rewriting module: app.schemas.user [assertion]
+              early skip of rewriting module: app.util [assertion]
+              early skip of rewriting module: app.util.hash [assertion]
+              early skip of rewriting module: hmac [assertion]
+              early skip of rewriting module: jwt [assertion]
+              early skip of rewriting module: jwt.jwa [assertion]
+              early skip of rewriting module: cryptography [assertion]
+              early skip of rewriting module: cryptography.__about__ [assertion]
+              early skip of rewriting module: cryptography.hazmat [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric.padding [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.hashes [assertion]
+              early skip of rewriting module: cryptography.utils [assertion]
+              early skip of rewriting module: cryptography.exceptions [assertion]
+              early skip of rewriting module: cryptography.hazmat.backends [assertion]
+              early skip of rewriting module: cryptography.hazmat.backends.interfaces [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives._asymmetric [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric.rsa [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives._serialization [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric.utils [assertion]
+              early skip of rewriting module: cryptography.hazmat._der [assertion]
+              early skip of rewriting module: jwt.exceptions [assertion]
+              early skip of rewriting module: jwt.jwk [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.serialization [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.serialization.base [assertion]
+              early skip of rewriting module: cryptography.hazmat._types [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric.dsa [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric.ec [assertion]
+              early skip of rewriting module: cryptography.hazmat._oid [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric.ed25519 [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric.ed448 [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.asymmetric.dh [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.serialization.ssh [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.ciphers [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.ciphers.base [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives._cipheralgorithm [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.ciphers.modes [assertion]
+              early skip of rewriting module: cryptography.hazmat.primitives.ciphers.algorithms [assertion]
+              early skip of rewriting module: bcrypt [assertion]
+              early skip of rewriting module: jwt.utils [assertion]
+              early skip of rewriting module: jwt.jwkset [assertion]
+              early skip of rewriting module: jwt.jws [assertion]
+              early skip of rewriting module: jwt.jwt [assertion]
+              early skip of rewriting module: app.api.routers.default [assertion]
+              early skip of rewriting module: app.api.workers.note_api [assertion]
+              early skip of rewriting module: app.crud.folder [assertion]
+              early skip of rewriting module: app.schemas.folder [assertion]
+              early skip of rewriting module: app.schemas.note [assertion]
+              early skip of rewriting module: app.schemas.list [assertion]
+              early skip of rewriting module: app.context.auth_context [assertion]
+              early skip of rewriting module: app.api.workers.list_api [assertion]
+              early skip of rewriting module: app.crud.list [assertion]
+              early skip of rewriting module: app.crud.note [assertion]
+              early skip of rewriting module: app.api.workers.folder_api [assertion]
+              early skip of rewriting module: app.api.routers.folder [assertion]
+              early skip of rewriting module: app.api.routers.note [assertion]
+              early skip of rewriting module: app.api.routers.user [assertion]
+              early skip of rewriting module: app.api.routers.list [assertion]
+              early skip of rewriting module: unittest [assertion]
+              early skip of rewriting module: unittest.result [assertion]
+              early skip of rewriting module: unittest.util [assertion]
+              early skip of rewriting module: unittest.case [assertion]
+              early skip of rewriting module: difflib [assertion]
+              early skip of rewriting module: unittest.suite [assertion]
+              early skip of rewriting module: unittest.loader [assertion]
+              early skip of rewriting module: unittest.main [assertion]
+              early skip of rewriting module: unittest.runner [assertion]
+              early skip of rewriting module: unittest.signals [assertion]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module tests/routes/folder_test.py>
+                    name: @py_builtins
+                    obj: <module 'builtins' (built-in)>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module tests/routes/folder_test.py>
+                    name: @pytest_ar
+                    obj: <module '_pytest.assertion.rewrite' from 'c:\\Users\\vkriznar\\Documents\\GitHub\\backend-developer-task\\.venv\\lib\\site-packages\\_pytest\\assertion\\rewrite.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module tests/routes/folder_test.py>
+                    name: BaseTesting
+                    obj: <class 'tests.lib.base_testing.BaseTesting'>
+                finish pytest_pycollect_makeitem --> <UnitTestCase BaseTesting> [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module tests/routes/folder_test.py>
+                    name: FolderTest
+                    obj: <class 'folder_test.FolderTest'>
+                finish pytest_pycollect_makeitem --> <UnitTestCase FolderTest> [hook]
+              finish pytest_make_collect_report --> <CollectReport 'tests/routes/folder_test.py' lenresult=2 outcome='passed'> [hook]
+            matchnodes finished ->  0 nodes [collection]
+          matchnodes [<Module tests/routes/folder_test.py>] ['FolderTest', 'test_get_all'] [collection]
+              pytest_collectstart [hook]
+                  collector: <UnitTestCase FolderTest>
+              finish pytest_collectstart --> [] [hook]
+              pytest_make_collect_report [hook]
+                  collector: <UnitTestCase FolderTest>
+              finish pytest_make_collect_report --> <CollectReport 'tests/routes/folder_test.py::FolderTest' lenresult=1 outcome='passed'> [hook]
+            matchnodes finished ->  0 nodes [collection]
+          matchnodes [<Module tests/routes/folder_test.py>] ['FolderTest', 'test_get_all'] [collection]
+            matchnodes finished ->  1 nodes [collection]
+        finish pytest_make_collect_report --> <CollectReport '' lenresult=1 outcome='passed'> [hook]
+        pytest_collectreport [hook]
+            report: <CollectReport '' lenresult=1 outcome='passed'>
+        finish pytest_collectreport --> [] [hook]
+    genitems <TestCaseFunction test_get_all> [collection]
+      pytest_itemcollected [hook]
+          item: <TestCaseFunction test_get_all>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collection_modifyitems [hook]
+          session: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          config: <_pytest.config.Config object at 0x0000020036782880>
+          items: [<TestCaseFunction test_get_all>]
+      finish pytest_collection_modifyitems --> [] [hook]
+      pytest_collection_finish [hook]
+          session: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        pytest_report_collectionfinish [hook]
+            config: <_pytest.config.Config object at 0x0000020036782880>
+            startdir: c:\Users\vkriznar\Documents\GitHub\backend-developer-task
+            items: [<TestCaseFunction test_get_all>]
+        finish pytest_report_collectionfinish --> [] [hook]
+      finish pytest_collection_finish --> [] [hook]
+    finish pytest_collection --> None [hook]
+    pytest_runtestloop [hook]
+        session: <Session backend-developer-task exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=1>
+      pytest_runtest_protocol [hook]
+          item: <TestCaseFunction test_get_all>
+          nextitem: None
+        pytest_runtest_logstart [hook]
+            nodeid: tests/routes/folder_test.py::FolderTest::test_get_all
+            location: ('tests\\routes\\folder_test.py', 11, 'FolderTest.test_get_all')
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <TestCaseFunction test_get_all>
+          pytest_fixture_setup [hook]
+              fixturedef: <FixtureDef argname='unittest_setUpClass_fixture_FolderTest' scope='class' baseid='tests/routes/folder_test.py::FolderTest'>
+              request: <SubRequest 'unittest_setUpClass_fixture_FolderTest' for <TestCaseFunction test_get_all>>
+          early skip of rewriting module: dotenv [assertion]
+          early skip of rewriting module: dotenv.compat [assertion]
+          early skip of rewriting module: dotenv.main [assertion]
+          early skip of rewriting module: dotenv.parser [assertion]
+          early skip of rewriting module: dotenv.variables [assertion]
+          early skip of rewriting module: logging.config [assertion]
+          early skip of rewriting module: logging.handlers [assertion]
+          early skip of rewriting module: queue [assertion]
+          early skip of rewriting module: _queue [assertion]
+          early skip of rewriting module: socketserver [assertion]
+          early skip of rewriting module: sqlalchemy.dialects.sqlite [assertion]
+          early skip of rewriting module: sqlalchemy.dialects.sqlite.base [assertion]
+          early skip of rewriting module: sqlalchemy.dialects.sqlite.json [assertion]
+          early skip of rewriting module: sqlalchemy.dialects.sqlite.pysqlcipher [assertion]
+          early skip of rewriting module: sqlalchemy.dialects.sqlite.pysqlite [assertion]
+          early skip of rewriting module: sqlalchemy.dialects.sqlite.dml [assertion]
+          early skip of rewriting module: sqlalchemy.dialects.sqlite.aiosqlite [assertion]
+          early skip of rewriting module: fastapi.testclient [assertion]
+          early skip of rewriting module: starlette.testclient [assertion]
+          early skip of rewriting module: requests [assertion]
+          early skip of rewriting module: urllib3 [assertion]
+          early skip of rewriting module: urllib3.exceptions [assertion]
+          early skip of rewriting module: urllib3.packages [assertion]
+          early skip of rewriting module: urllib3.packages.ssl_match_hostname [assertion]
+          early skip of rewriting module: urllib3.packages.six [assertion]
+          early skip of rewriting module: urllib3.packages.six.moves [assertion]
+          early skip of rewriting module: urllib3.packages.six.moves.http_client [assertion]
+          early skip of rewriting module: urllib3._version [assertion]
+          early skip of rewriting module: urllib3.connectionpool [assertion]
+          early skip of rewriting module: urllib3.connection [assertion]
+          early skip of rewriting module: urllib3.util [assertion]
+          early skip of rewriting module: urllib3.util.connection [assertion]
+          early skip of rewriting module: urllib3.contrib [assertion]
+          early skip of rewriting module: urllib3.contrib._appengine_environ [assertion]
+          early skip of rewriting module: urllib3.util.wait [assertion]
+          early skip of rewriting module: urllib3.util.request [assertion]
+          early skip of rewriting module: brotli [assertion]
+          early skip of rewriting module: urllib3.util.response [assertion]
+          early skip of rewriting module: urllib3.util.retry [assertion]
+          early skip of rewriting module: urllib3.util.ssl_ [assertion]
+          early skip of rewriting module: urllib3.util.url [assertion]
+          early skip of rewriting module: urllib3.util.ssltransport [assertion]
+          early skip of rewriting module: urllib3.util.timeout [assertion]
+          early skip of rewriting module: urllib3.util.proxy [assertion]
+          early skip of rewriting module: urllib3._collections [assertion]
+          early skip of rewriting module: urllib3.request [assertion]
+          early skip of rewriting module: urllib3.filepost [assertion]
+          early skip of rewriting module: urllib3.fields [assertion]
+          early skip of rewriting module: urllib3.packages.six.moves.urllib [assertion]
+          early skip of rewriting module: urllib3.packages.six.moves.urllib.parse [assertion]
+          early skip of rewriting module: urllib3.response [assertion]
+          early skip of rewriting module: brotli [assertion]
+          early skip of rewriting module: urllib3.util.queue [assertion]
+          early skip of rewriting module: urllib3.poolmanager [assertion]
+          early skip of rewriting module: chardet [assertion]
+          early skip of rewriting module: chardet.universaldetector [assertion]
+          early skip of rewriting module: chardet.charsetgroupprober [assertion]
+          early skip of rewriting module: chardet.enums [assertion]
+          early skip of rewriting module: chardet.charsetprober [assertion]
+          early skip of rewriting module: chardet.escprober [assertion]
+          early skip of rewriting module: chardet.codingstatemachine [assertion]
+          early skip of rewriting module: chardet.escsm [assertion]
+          early skip of rewriting module: chardet.latin1prober [assertion]
+          early skip of rewriting module: chardet.mbcsgroupprober [assertion]
+          early skip of rewriting module: chardet.utf8prober [assertion]
+          early skip of rewriting module: chardet.mbcssm [assertion]
+          early skip of rewriting module: chardet.sjisprober [assertion]
+          early skip of rewriting module: chardet.mbcharsetprober [assertion]
+          early skip of rewriting module: chardet.chardistribution [assertion]
+          early skip of rewriting module: chardet.euctwfreq [assertion]
+          early skip of rewriting module: chardet.euckrfreq [assertion]
+          early skip of rewriting module: chardet.gb2312freq [assertion]
+          early skip of rewriting module: chardet.big5freq [assertion]
+          early skip of rewriting module: chardet.jisfreq [assertion]
+          early skip of rewriting module: chardet.jpcntx [assertion]
+          early skip of rewriting module: chardet.eucjpprober [assertion]
+          early skip of rewriting module: chardet.gb2312prober [assertion]
+          early skip of rewriting module: chardet.euckrprober [assertion]
+          early skip of rewriting module: chardet.cp949prober [assertion]
+          early skip of rewriting module: chardet.big5prober [assertion]
+          early skip of rewriting module: chardet.euctwprober [assertion]
+          early skip of rewriting module: chardet.sbcsgroupprober [assertion]
+          early skip of rewriting module: chardet.hebrewprober [assertion]
+          early skip of rewriting module: chardet.langbulgarianmodel [assertion]
+          early skip of rewriting module: chardet.sbcharsetprober [assertion]
+          early skip of rewriting module: chardet.langgreekmodel [assertion]
+          early skip of rewriting module: chardet.langhebrewmodel [assertion]
+          early skip of rewriting module: chardet.langrussianmodel [assertion]
+          early skip of rewriting module: chardet.langthaimodel [assertion]
+          early skip of rewriting module: chardet.langturkishmodel [assertion]
+          early skip of rewriting module: chardet.version [assertion]
+          early skip of rewriting module: requests.exceptions [assertion]
+          early skip of rewriting module: requests.__version__ [assertion]
+          early skip of rewriting module: requests.utils [assertion]
+          early skip of rewriting module: requests.certs [assertion]
+          early skip of rewriting module: certifi [assertion]
+          early skip of rewriting module: certifi.core [assertion]
+          early skip of rewriting module: importlib.resources [assertion]
+          early skip of rewriting module: importlib._common [assertion]
+          early skip of rewriting module: requests._internal_utils [assertion]
+          early skip of rewriting module: requests.compat [assertion]
+          early skip of rewriting module: simplejson [assertion]
+          early skip of rewriting module: urllib.request [assertion]
+          early skip of rewriting module: urllib.error [assertion]
+          early skip of rewriting module: urllib.response [assertion]
+          early skip of rewriting module: nturl2path [assertion]
+          early skip of rewriting module: http.cookiejar [assertion]
+          early skip of rewriting module: requests.cookies [assertion]
+          early skip of rewriting module: requests.structures [assertion]
+          early skip of rewriting module: requests.packages [assertion]
+          early skip of rewriting module: idna [assertion]
+          early skip of rewriting module: idna.package_data [assertion]
+          early skip of rewriting module: idna.core [assertion]
+          early skip of rewriting module: idna.idnadata [assertion]
+          early skip of rewriting module: idna.intranges [assertion]
+          early skip of rewriting module: requests.models [assertion]
+          early skip of rewriting module: encodings.idna [assertion]
+          early skip of rewriting module: stringprep [assertion]
+          early skip of rewriting module: requests.hooks [assertion]
+          early skip of rewriting module: requests.auth [assertion]
+          early skip of rewriting module: requests.status_codes [assertion]
+          early skip of rewriting module: requests.api [assertion]
+          early skip of rewriting module: requests.sessions [assertion]
+          early skip of rewriting module: requests.adapters [assertion]
+          early skip of rewriting module: urllib3.contrib.socks [assertion]
+          early skip of rewriting module: socks [assertion]
+          finish pytest_fixture_setup --> None [hook]
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <TestCaseFunction test_get_all>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x0000020036782880>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <TestCaseFunction test_get_all>
+        early skip of rewriting module: netrc [assertion]
+        early skip of rewriting module: concurrent.futures.thread [assertion]
+        finish pytest_runtest_call --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <TestCaseFunction test_get_all>
+            call: <CallInfo when='call' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='call' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='call' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='call' outcome='passed'>
+              config: <_pytest.config.Config object at 0x0000020036782880>
+          finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <TestCaseFunction test_get_all>
+            nextitem: None
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='unittest_setUpClass_fixture_FolderTest' scope='class' baseid='tests/routes/folder_test.py::FolderTest'>
+              request: <SubRequest 'unittest_setUpClass_fixture_FolderTest' for <TestCaseFunction test_get_all>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <TestCaseFunction test_get_all>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'tests/routes/folder_test.py::FolderTest::test_get_all' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x0000020036782880>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: tests/routes/folder_test.py::FolderTest::test_get_all
+            location: ('tests\\routes\\folder_test.py', 11, 'FolderTest.test_get_all')
+        finish pytest_runtest_logfinish --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+    finish pytest_runtestloop --> True [hook]
+    pytest_sessionfinish [hook]
+        session: <Session backend-developer-task exitstatus=0 testsfailed=0 testscollected=1>
+        exitstatus: 0
+      pytest_terminal_summary [hook]
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x0000020036F77A30>
+          exitstatus: 0
+          config: <_pytest.config.Config object at 0x0000020036782880>
+      finish pytest_terminal_summary --> [] [hook]
+    finish pytest_sessionfinish --> [] [hook]
+    pytest_unconfigure [hook]
+        config: <_pytest.config.Config object at 0x0000020036782880>
+    finish pytest_unconfigure --> [] [hook]
