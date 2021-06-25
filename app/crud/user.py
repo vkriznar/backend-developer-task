@@ -1,4 +1,3 @@
-from typing import List
 from sqlalchemy.orm import Session
 from app.crud.models import User
 from app.schemas.user import UserCreate

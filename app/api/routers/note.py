@@ -1,5 +1,4 @@
-from app.crud.types import HeadingSort, SharedType
-from typing import List, Optional
+from typing import List
 from app.api.workers.note_api import NoteApi
 from app.schemas.note import NoteCreate, NoteOut, NoteUpdate
 from app.context.auth_context import AppContextAuth, get_auth_context

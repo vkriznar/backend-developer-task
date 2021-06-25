@@ -1,6 +1,4 @@
 from typing import List, Optional
-
-from fastapi.param_functions import Query
 from app.api.workers.folder_api import FolderApi
 from app.schemas.folder import FolderCreate, FolderOut, FolderUpdate
 from app.context.auth_context import AppContextAuth, get_auth_context
