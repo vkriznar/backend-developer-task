@@ -56,7 +56,7 @@ class NoteApi:
         self.note_db.delete(note_id)
 
     def get_all(self, folder_id: int) -> List[NoteOut]:
-        notes_db = self.note_db.get_all(folder_id)
+        notes_db = self.note_db.get_all_for_id(folder_id)
 
         filtered_notes = filter(lambda n: self._filter_by_user(n, self.ctx.user.id), notes_db)
         return list(map(lambda n: self._map_note(n), filtered_notes))

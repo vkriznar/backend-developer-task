@@ -66,7 +66,7 @@ class FolderApi:
         return self._map_folder(folder_db)
 
     def _map_folder(self, folder_db: Folder) -> FolderOut:
-        return FolderOut(**vars(folder_db), notes=self.note_api.get_all(folder_db.user_id, folder_db.id))
+        return FolderOut(**vars(folder_db), notes=self.note_api.get_all(folder_db.id))
 
     def __validate_user__(self, user_id: int):
         if self.ctx.user.id != user_id:

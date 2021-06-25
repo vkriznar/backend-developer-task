@@ -1,0 +1,38 @@
+{
+    "type_name": "app.crud.models.Note",
+    "depends": ["folder.json"],
+    "data": [
+        {
+            "id": 1,
+            "folder_id": 1,
+            "name": "shared-note",
+            "shared": true,
+            "type": "TEXT",
+            "text_body": "my-shared-note-1"
+        },
+        {
+            "id": 2,
+            "folder_id": 1,
+            "name": "not-shared-note",
+            "shared": false,
+            "type": "TEXT",
+            "text_body": "my-not-shared-note-1"
+        },
+        {
+            "id": 3,
+            "folder_id": 2,
+            "name": "not-shared-note-folder-2",
+            "shared": false,
+            "type": "TEXT",
+            "text_body": "not-shared-note-folder-2"
+        },
+        {
+            "id": 4,
+            "folder_id": 1,
+            "name": "list-note-1",
+            "shared": true,
+            "type": "LIST",
+            "text_body": null
+        }
+    ]
+}

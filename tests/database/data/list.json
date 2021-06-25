@@ -1,0 +1,21 @@
+{
+    "type_name": "app.crud.models.ListDbModel",
+    "depends": ["note.json"],
+    "data": [
+        {
+            "id": 1,
+            "note_id": 4,
+            "text_body": "note-4-list-some-text: cow and dog"
+        },
+        {
+            "id": 2,
+            "note_id": 4,
+            "text_body": "note-4-list-some-text: cow"
+        },
+        {
+            "id": 3,
+            "note_id": 4,
+            "text_body": "note-4-list-some-text: query this!"
+        }
+    ]
+}

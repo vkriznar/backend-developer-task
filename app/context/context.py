@@ -1,3 +1,5 @@
+from contextlib import contextmanager
+from typing import Callable, Optional
 from app.context.settings import AppSettings, get_app_settings
 from fastapi import Depends
 from sqlalchemy import create_engine
@@ -18,6 +20,19 @@ class AppContext:
 
 
 def get_context(settings: AppSettings = Depends(get_app_settings)):
+    SessionLocal = get_session_factory(settings)
+    database: Session = SessionLocal()
+    context = AppContext(database, settings)
+    try:
+        yield context
+    finally:
+        context.dispose()
+
+
+@contextmanager
+def get_plain_context(settings_provider: Optional[Callable[[], AppSettings]]):
+    settings_callable = settings_provider or get_app_settings
+    settings = settings_callable()
     SessionLocal = get_session_factory(settings)
     database: Session = SessionLocal()
     context = AppContext(database, settings)

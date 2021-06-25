@@ -1,0 +1,20 @@
+{
+    "type_name": "app.crud.models.User",
+    "depends": [],
+    "data": [
+        {
+            "id": 1,
+            "name": "Admin",
+            "username": "admin",
+            "hashed_password": "9d40d8539c2b0bb17a81fd27fe2b99d43cb68ed4c4c099db8d7d520fbe5a33e7",
+            "salt": "21c09fc8f00e41e3124d9c0d02ad1aea"
+        },
+        {
+            "id": 2,
+            "name": "Vid Križnar",
+            "username": "vkriznar",
+            "hashed_password": "8c161abff00a97847c7d37840a697ffb50fa87d091c96fe40e0ba92a86e3fdd2",
+            "salt": "ce7edbd2996423799afdeed17674a1d8"
+        }
+    ]
+}
