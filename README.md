@@ -4,6 +4,7 @@ Finished with creating a notes REST API. Instructions for running the app aswell
 
 Disclaimer: Due to simplification for testing party I pushed both the environment and database file to Github. Normally I would provide template file for both and not actually push files to origin. But again for easier setup process and it not being actual production code I decided to just push the two files.
 
+_________________________________________________________________________________________________________________________________________________________________________________
 
 Create REST API that allows users to manage their notes.
 Notes can be organized into folders for easier management.
